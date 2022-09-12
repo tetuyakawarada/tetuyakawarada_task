@@ -71,7 +71,9 @@ class TaskController extends Controller
      */
     public function edit($id)
     {
-        //
+        $task = Task::find($id);
+
+        return view('tasks.edit', ['task' => $task]);
     }
 
     /**
@@ -83,7 +85,18 @@ class TaskController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // インスタンスの作成(データ取得)
+        $task = Task::find($id);
+
+        // 値の更新
+        $task->title = $request->title;
+        $task->body = $request->body;
+
+        // インスタンス更新
+        $task->save();
+
+        // 更新したらindexに戻る
+        return redirect('/tasks');
     }
 
     /**
