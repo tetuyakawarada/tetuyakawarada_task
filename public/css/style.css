@@ -1,8 +1,19 @@
 @charset "utf-8";
 
-.task-index {
+.task-index-group {
     padding-left: 0px;
+    /* display: flex; */
 }
+
+.task-index {
+    /* float: left; */
+}
+
+.deleate-botton {
+    /* clear: left; */
+}
+
+
 
 /* .body {
     width: 300px;

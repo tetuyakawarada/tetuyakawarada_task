@@ -12,18 +12,15 @@
 <body>
     <h1>タスク一覧</h1>
 
-    <ul class="task-index">
+    <ul class="task-index-group">
         @foreach ($tasks as $task)
-            <!-- // リンク先をidで取得し名前で出力 -->
-            <li><a href="/tasks/{{ $task->id }}">{{ $task->title }}</a></li>
-        @endforeachgit
-
-        <form action="/tasks/{{ $task->id }}" method="post">
-            @csrf
-            @method('DELETE')
-            <input type="submit" value="削除する" onclick="if(!confirm('マジで？')){return false};">
-        </form>
-
+            <li><a class="task-index" href="/tasks/{{ $task->id }}">{{ $task->title }}</a></li>
+            <form class="deleate-botton" action="/tasks/{{ $task->id }}" method="post">
+                @csrf
+                @method('DELETE')
+                <input type="submit" value="削除する" onclick="if(!confirm('削除しますか？')){return false};">
+            </form>
+        @endforeach
     </ul>
 
     <hr>
