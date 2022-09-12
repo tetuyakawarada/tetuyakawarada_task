@@ -9,8 +9,9 @@
 </head>
 
 <body>
-    <h1>タイトル</h1>
-    <p>本文</p>
+    <h1>タスク詳細</h1>
+    <p>【タイトル】<br>{!! nl2br(e($task->title)) !!}</p>
+    <p>【内容】<br>{!! nl2br(e($task->body)) !!}</p>
 </body>
 
 </html>
