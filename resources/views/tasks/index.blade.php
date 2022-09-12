@@ -26,8 +26,36 @@
     <hr>
 
     <h1>新規論文投稿</h1>
-    <p>タイトル</p>
-    <p>内容</p>
+
+    @if ($errors->any())
+        <div class="error">
+            <p>
+                <b>{{ count($errors) }}件のエラーがあります。</b>
+            </p>
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+    <form action="/tasks" method="post">
+        @csrf
+
+        <p>
+            <label for="title">タイトル</label><br>
+            <input type="text" name="title" value="{{ old('title') }}">
+        </p>
+
+        <p>
+            <label for="body">内容</label><br>
+            <textarea name="body" class="body">{{ old('body') }}</textarea>
+        </p>
+
+        <input type="submit" value="Create Task">
+    </form>
+
 </body>
 
 </html>
