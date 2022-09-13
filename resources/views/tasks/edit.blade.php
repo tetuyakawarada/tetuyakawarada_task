@@ -38,10 +38,14 @@
 
         <div class="button-group">
             <input type="submit" value="更新">
-            <button type="button" onclick="history.back()">詳細に戻る</button>
-            {{-- <button onclick="href='/tasks/{{ $task->id }}'">詳細に戻る</button> --}}
         </div>
+
     </form>
+
+    <div class="button-group">
+        <button onclick="location.href='/tasks/{{ $task->id }}'">詳細に戻る</button>
+    </div>
+
 </body>
 
 </html>
