@@ -2,40 +2,13 @@
 
 .task-index-group {
     padding-left: 0px;
-    /* display: flex; */
 }
 
-/* .task-index { */
-    /* float: left; */
-/* } */
-
-/* .deleate-botton { */
-    /* clear: left; */
-/* } */
+.task-index {
+    float: left;
+    padding-right: 10px;
+}
 
 .button-group {
     display: flex;
 }
-
-/* .button-group>*:not(:last-child) {
-    margin-right: 10px;
-} */
-
-
-
-/* .body {
-    width: 300px;
-    height: 100px;
-} */
-
-/* .button-group {
-    display: flex;
-} */
-
-/* .button-group>*:not(:last-child) {
-    margin-right: 10px;
-} */
-
-/* .error {
-    color: red;
-} */

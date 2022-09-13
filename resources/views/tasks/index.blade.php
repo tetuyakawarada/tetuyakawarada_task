@@ -14,12 +14,14 @@
 
     <ul class="task-index-group">
         @foreach ($tasks as $task)
-            <li><a class="task-index" href="/tasks/{{ $task->id }}">{{ $task->title }}</a></li>
-            <form class="deleate-botton" action="/tasks/{{ $task->id }}" method="post">
-                @csrf
-                @method('DELETE')
-                <input type="submit" value="削除する" onclick="if(!confirm('削除しますか？')){return false};">
-            </form>
+            <li>
+                <a class="task-index" href="/tasks/{{ $task->id }}">{{ $task->title }}</a>
+                <form action="/tasks/{{ $task->id }}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <input type="submit" value="削除する" onclick="if(!confirm('削除しますか？')){return false};">
+                </form>
+            </li>
         @endforeach
     </ul>
 
