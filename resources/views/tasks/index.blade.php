@@ -28,10 +28,8 @@
     <h1>新規論文投稿</h1>
 
     @if ($errors->any())
-        <div class="error">
-            <p>
-                <b>{{ count($errors) }}件のエラーがあります。</b>
-            </p>
+        <div>
+            <p>【エラー内容】</p>
             <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
