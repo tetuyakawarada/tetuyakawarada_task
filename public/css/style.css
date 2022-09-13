@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+.task-index-group {
+    padding-left: 0px;
+}
+
+.task-index {
+    float: left;
+    padding-right: 10px;
+}
+
+.button-group {
+    display: flex;
+    float: left;
+}
